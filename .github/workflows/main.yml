@@ -21,7 +21,7 @@ jobs:
       run: |
         mkdir bin 
         unset HAS_SECRET
-        if [-n $SB_PASSWORD]; then HAS_SECRET='true' ; fi
+        if [[ -n "$SB_PASSWORD" ]]; then HAS_SECRET='true' ; fi
         echo ::set-output name=HAS_SECRET::${HAS_SECRET}
 
     - name: LaTeX compilation
