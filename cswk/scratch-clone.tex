@@ -66,15 +66,16 @@ The code should compile out of the box. You can test this by running:
 \begin{minted}{bash}
 $ stack build
 \end{minted}
-To start the program, you should run the following:
+To start the program, you should run the following command which should result in (roughly) the following output:
 \begin{minted}{text}
-$ stack exec scratch-clone
+$ stack run
 Starting web server...
-Started. Press any key to quit.
+Started on http://localhost:52089
+Press enter to quit.
 \end{minted}
-In order to view the user interface, open your web browser and navigate to\footnote{If, for whatever reason, port 8000 is unavailable on your machine, you can change this by modifying the definition of \haskellIn{main} in \texttt{\small src/Main.hs}.}:
+Note that the port on which the server runs (in this case $52089$) is randomised. In order to view the user interface, open your web browser and navigate to the following address, making sure to replace $52089$ with whatever port number was shown in the output above:
 \begin{center}
-\url{http://localhost:8000/}
+\url{http://localhost:52089/}
 \end{center}
 You can drag together programs using building blocks from the toolbox on the left. However, if you click ``Evaluate'' at the top right corner of the screen, you will get an error since the interpreter is not yet implemented.
 
