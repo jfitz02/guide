@@ -18,6 +18,15 @@ Recall that we have already proved the following (monoidal) properties about nat
 \end{array}
 \end{displaymath}
 
+Also Recall the definition of \haskellIn{add} from \Cref{sec:lecture-10}:
+\begin{displaymath}
+\begin{array}{lllcl}
+\multicolumn{5}{l}{\mathit{add} :: \mathit{Nat} \to \mathit{Nat} \to \mathit{Nat}} \\
+\mathit{add} & Z & m & = & m \\
+\mathit{add} & (S~n) & m & = & S~(\mathit{add}~n~m)
+\end{array}
+\end{displaymath}
+
 \taskLine
 
 \task[task:succ-comm]{Prove the following property about addition just by rewriting one side of the equation until you end up with the other side:
